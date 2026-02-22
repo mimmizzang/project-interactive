@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <!---고정된 헤더 배경 투명 스크롤 시 뒤에 비치게 모바일 메뉴는 햄버거 사용 아이콘 누르면 모바일 메뉴 나타나게 메뉴가 나타나는 애니메이션 고민--->
+    <!---고정된 헤더 배경 투명 스크롤 시 뒤에 비치게 모바일 메뉴는 햄버거 사용 아이콘 누르면 모바일 메뉴 나타나게 --->
     <header class="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
       <div class="container mx-auto flex items-center justify-between px-4 py-4 md:px-8">
         <a href="#" class="text-xl font-black tracking-tighter text-indigo-600">LOGO</a>
@@ -49,17 +49,17 @@
       </nav>
     </div>
 
-    <!---viewport 꽉 채우는 메인 이미지나 배경색, 텍스트 아래로 스크롤해서 각각의 section에 진입 텍스트들 gsap 이용해서 애니메이션 효과 고민--->
+    <!---viewport 꽉 채우는 메인 이미지나 배경색 gsap 이용해서 애니메이션 효과 적용--->
     <section id="main" class="relative flex h-svh w-full items-center justify-center overflow-hidden bg-slate-50">
       <div class="absolute -top-20 -left-20 size-96 rounded-full bg-indigo-100/50 blur-3xl"></div>
       <div class="absolute -right-20 -bottom-20 size-96 rounded-full bg-blue-100/50 blur-3xl"></div>
 
       <div class="relative z-10 container px-4 text-center">
-        <div class="">
+        <div class="overflow-hidden">
           <p class="main-sub mb-4 font-bold tracking-[0.3em] text-indigo-600">Happy New Year</p>
         </div>
 
-        <div class="">
+        <div class="overflow-hidden">
           <h1
             class="main-title text-5xl leading-tight font-black tracking-tighter text-slate-900 md:text-8xl lg:text-9xl"
           >
@@ -70,14 +70,10 @@
         </div>
 
         <div class="mt-10 flex justify-center gap-4 overflow-hidden">
-          <button
-            class="main-btn cursor-pointer rounded-full bg-slate-900 px-8 py-4 text-sm font-bold text-white transition-transform hover:scale-105"
-          >
+          <button class="main-btn cursor-pointer rounded-full bg-slate-900 px-8 py-4 text-sm font-bold text-white">
             Start
           </button>
-          <button
-            class="main-btn cursor-pointer rounded-full bg-indigo-600 px-8 py-4 text-sm font-bold text-white transition-transform hover:scale-105"
-          >
+          <button class="main-btn cursor-pointer rounded-full bg-indigo-600 px-8 py-4 text-sm font-bold text-white">
             Lucky
           </button>
         </div>
