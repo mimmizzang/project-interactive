@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Happy 2026</title>
 
     <link rel="stylesheet" href="/src/style.css" />
   </head>
@@ -267,7 +267,7 @@
 
     <!---footer--->
     <footer class="border-t border-slate-100 bg-slate-50 py-8">
-      <div class="container mx-auto flex flex-col items-center justify-between gap-6 px-4 md:flex-row">
+      <div class="container mx-auto flex flex-col items-center justify-around gap-6 px-4 md:flex-row">
         <p class="text-sm font-light text-slate-400">© Lee, Byeong-Gwan. All rights reserved.</p>
 
         <div class="flex gap-8">
@@ -287,6 +287,17 @@
       </div>
     </footer>
 
+    <!---scrollToTop 버튼--->
+    <button
+      id="scrollToTopBtn"
+      class="invisible fixed right-8 bottom-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-indigo-600/80 text-white opacity-0 shadow-lg transition-colors hover:bg-indigo-800 hover:shadow-2xl"
+    >
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg>
+    </button>
+
+    <!------>
     <script type="module" src="/src/script.js"></script>
   </body>
 </html>

@@ -1,7 +1,11 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Swiper from "swiper";
 import { Navigation, FreeMode } from "swiper/modules";
 import "swiper/css";
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 /*모바일 메뉴 클릭 효과*/
 const openBtn = document.querySelector("#open-menu");
@@ -82,4 +86,26 @@ new Swiper(".main-swiper", {
       spaceBetween: 40,
     },
   },
+});
+
+/*scrolltotop gsap 효과*/
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+scrollToTopBtn.addEventListener("click", () => {
+  gsap.to(window, {
+    scrollTo: 0,
+    duration: 1,
+    ease: "power2.out",
+  });
+});
+
+gsap.to(scrollToTopBtn, {
+  scrollTrigger: {
+    trigger: "body",
+    start: "top -20%",
+    toggleActions: "play none none reverse",
+  },
+  autoAlpha: 1,
+  duration: 0.4,
+  ease: "power2.out",
 });
